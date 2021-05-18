@@ -17,7 +17,7 @@ public class ItemDiscount implements DiscountFinder{
      * @return ArrayList<DiscountDTO> The list of discounts that are appliable to the sale
      */
     @Override
-    public ArrayList<DiscountDTO> findDiscount(SaleDTO saleDTO, ArrayList<DiscountDTO> availableDiscounts) {
+    public ArrayList<DiscountDTO> findDiscounts(SaleDTO saleDTO, ArrayList<DiscountDTO> availableDiscounts) {
         ArrayList<DiscountDTO> foundDiscounts = new ArrayList<DiscountDTO>();
         for(DiscountDTO discount : availableDiscounts){
             for(Item item : saleDTO.getAddedItems()){

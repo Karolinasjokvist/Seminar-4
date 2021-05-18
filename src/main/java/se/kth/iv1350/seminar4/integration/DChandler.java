@@ -29,7 +29,7 @@ public class DChandler {
      * @return ArrayList<DiscountDTO> a list of valid available discounts
      */
     public ArrayList<DiscountDTO> findDiscount(SaleDTO sale, DiscountFinder finder){
-        return finder.findDiscount(sale, availableDiscounts);
+        return finder.findDiscounts(sale, availableDiscounts);
     }
     
 }
