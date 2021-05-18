@@ -10,7 +10,14 @@ public class CashRegister {
     private CashRegister() {
         this.amount = 1000;
     }
-
+    
+    /** 
+     * Creates an instance of a cash register, that is used instead of a constructor
+     * because there should only be one instance of a CashRegister
+     */
+    public static CashRegister getInstance(){
+        return CASH_REGISTER;
+    }
     
     /** 
      * Returns the amount in the register
@@ -31,11 +38,4 @@ public class CashRegister {
         this.amount += amount;
     }
 
-    /** 
-     * Creates an instance of a cash register, that is used instead of a constructor
-     * because there should only be one instance of a CashRegister
-     */
-    public static CashRegister getInstance(){
-        return CASH_REGISTER;
-    }
 }

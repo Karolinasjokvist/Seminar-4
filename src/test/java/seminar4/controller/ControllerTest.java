@@ -1,4 +1,4 @@
-package seminar3.controller;
+package seminar4.controller;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
