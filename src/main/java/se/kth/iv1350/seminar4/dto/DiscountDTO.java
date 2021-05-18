@@ -3,7 +3,7 @@ package se.kth.iv1350.seminar4.dto;
  * Discount data transer object, which stores the rules for the discount.
  */
 public class DiscountDTO {
-    private final String type;
+    private String type;
     private String IDOfDiscountedItem;
     private double amount;
     private double minRequiredPrice;

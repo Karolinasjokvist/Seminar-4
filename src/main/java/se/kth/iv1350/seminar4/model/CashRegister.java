@@ -5,6 +5,7 @@ package se.kth.iv1350.seminar4.model;
 */
 public class CashRegister {
     private double amount;
+    private static CashRegister CASH_REGISTER = new CashRegister();
 
     private CashRegister() {
         this.amount = 1000;
@@ -30,15 +31,11 @@ public class CashRegister {
         this.amount += amount;
     }
 
-    private static class RegisterHolder {
-        private static CashRegister instance = new CashRegister();
-    }
-
     /** 
      * Creates an instance of a cash register, that is used instead of a constructor
      * because there should only be one instance of a CashRegister
      */
     public static CashRegister getInstance(){
-        return RegisterHolder.instance;
+        return CASH_REGISTER;
     }
 }
