@@ -36,27 +36,35 @@ public class View {
         SaleInfoDTO saleInfo = null;
         double totalPrice;
         System.out.println("A new sale has been started");
+        System.out.println();
         for(String identifiers : identifier){
             try {
                 saleInfo = contr.identifyItem(identifiers);
                 totalPrice = saleInfo.getRunningTotal();
-                System.out.println();
                 System.out.println(saleInfo.getItemName() + " was added"); 
                 System.out.println("total price is: "+ totalPrice);
-            } catch (ItemNotFoundException | ServerDownException e) {
-                System.err.println("Could not find item");
+                System.out.println();
+            } catch (ItemNotFoundException e) {
+                System.err.println("For users: Could not find item in the database.");
+                System.out.println();
+            } catch (ServerDownException e) {
+                System.err.println("For users: The server is currently down, try again later!");
+                System.out.println();
             }
         }
 
         totalPrice = contr.addDiscounts();
-        System.out.println();
-        System.out.println("All fitting discounts were applied, new price is: "+ totalPrice);
-        System.out.println();
-        double change = contr.pay(amountPaid, currency);
-        System.out.println();
-        System.out.println("The sale is completed, " + amountPaid + " kr was paid");
+        if(!(totalPrice == 0))
+        {
+            System.out.println("All fitting discounts were applied, new price is: "+ totalPrice);
+            System.out.println();
+            double change = contr.pay(amountPaid, currency);
+            System.out.println();
+            System.out.println("The sale is completed, " + amountPaid + " kr was paid");
+            
+            System.out.println();
+            System.out.println("Change: " + ((double)Math.round(change * 100)) / 100);
+        }
         
-        System.out.println();
-        System.out.println("Change: " + ((double)Math.round(change * 100)) / 100);
     }
 }
