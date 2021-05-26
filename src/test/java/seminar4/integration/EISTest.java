@@ -1,4 +1,4 @@
-package seminar3.integration;
+package seminar4.integration;
 
 
 import static org.junit.Assert.assertEquals;

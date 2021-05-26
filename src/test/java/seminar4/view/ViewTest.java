@@ -1,4 +1,4 @@
-package seminar3.view;
+package seminar4.view;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;

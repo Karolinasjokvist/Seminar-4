@@ -1,4 +1,4 @@
-package seminar3.model;
+package seminar4.model;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;

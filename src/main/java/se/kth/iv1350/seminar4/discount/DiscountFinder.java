@@ -9,5 +9,5 @@ import se.kth.iv1350.seminar4.dto.*;
  */
 public interface DiscountFinder {
 
-    ArrayList<DiscountDTO> findDiscount(SaleDTO saleDTO, ArrayList<DiscountDTO> availableDiscounts);
+    ArrayList<DiscountDTO> findDiscounts(SaleDTO saleDTO, ArrayList<DiscountDTO> availableDiscounts);
 }

@@ -1,4 +1,4 @@
-package seminar3.main;
+package seminar4.main;
 
 import org.junit.After;
 import org.junit.Test;
